@@ -47,8 +47,9 @@
 }
 .content {
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 200px;
     text-align: center;
+
 }
 .content h1 {
     letter-spacing: normal;
@@ -61,18 +62,29 @@
     line-height: 100px;
     font-size: 40px;
     }
-
-
-
-img {
+#grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 50vh;
+        grid-gap: 10px;}
+.img-gallery > img {
     float: center;
-    width:  300px;
-    height: 300px;
+    width:  375px;
+    height: 375px;
     object-fit: cover;
+    
 }
 .img-gallery{
     width: 80%;
     margin: 100px auto 50px;
+}
+.img-gallery img{
+cursor: pointer;
+}
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 50px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.4);
 }
 
 footer {
